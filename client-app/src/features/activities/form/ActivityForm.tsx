@@ -1,37 +1,44 @@
-import React, { FormEvent, useContext, useState } from 'react';
+import React, { FormEvent, useContext, useState, useEffect } from 'react';
 import { Button, Form, Segment } from 'semantic-ui-react';
 import { IActivity } from '../../../app/models/Activity';
 import { v4 as uuid } from 'uuid';
 import ActivityStore from '../../../app/stores/ActivityStore';
 import { observer } from 'mobx-react-lite';
+import { RouteComponentProps } from 'react-router-dom';
 
-interface IProps {
-    activity: IActivity;
+interface IDetailParams {
+    id: string;
 }
 
-export const ActivityForm: React.FC<IProps> = observer(({
-    activity: initialFormState,
-}) => {
+export const ActivityForm: React.FC<
+    RouteComponentProps<IDetailParams>
+> = observer(({ match }) => {
     const activityStore = useContext(ActivityStore);
-    const { createActivity, editActivity, cancelFormOpen, submitting } = activityStore;
+    const { 
+        createActivity, 
+        editActivity, 
+        cancelFormOpen, 
+        loadActivity,
+        submitting, 
+        activity: initialFormState 
+    } = activityStore;
 
-    const initializeForm = () => {
-        if (initialFormState) {
-            return initialFormState;
+    useEffect(() => {
+        if (match.params.id) {
+            loadActivity(match.params.id)
+                .then(() => initialFormState && setActivity(initialFormState));
         }
+    }, [loadActivity, match.params.id, initialFormState])
 
-        return {
-            id: '',
-            title: '',
-            category: '',
-            description: '',
-            date: '',
-            city: '',
-            venue: '',
-        };
-    };
-
-    const [activity, setActivity] = useState<IActivity>(initializeForm);
+    const [activity, setActivity] = useState<IActivity>({
+        id: '',
+        title: '',
+        category: '',
+        description: '',
+        date: '',
+        city: '',
+        venue: '',
+    });
 
     const handleSubmit = () => {
         if (activity.id.length === 0) {
