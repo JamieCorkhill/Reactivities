@@ -1,15 +1,9 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { observer } from 'mobx-react-lite';
-
 import { Button, Container, Menu } from 'semantic-ui-react';
-
-import ActivityStore from '../../app/stores/ActivityStore';
 import { NavLink } from 'react-router-dom';
 
 export const NavBar: React.FC = observer(() => {
-    const activityStore = useContext(ActivityStore);
-    const { openCreateForm } = activityStore;
-
     return (
         <div>
             <Menu fixed="top" inverted>
@@ -20,7 +14,12 @@ export const NavBar: React.FC = observer(() => {
                     </Menu.Item>
                     <Menu.Item name="Activities" as={NavLink} to='/activities'/>
                     <Menu.Item>
-                        <Button as={NavLink} to='/createActivity' onClick={openCreateForm} positive content="Create Activity"></Button>
+                        <Button 
+                            as={NavLink} 
+                            to='/createActivity' 
+                            positive 
+                            content="Create Activity"
+                        />
                     </Menu.Item>
                 </Container>
             </Menu>

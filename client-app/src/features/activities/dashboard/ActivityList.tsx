@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 export const ActivityList: React.FC = observer(() => {
     const activityStore = useContext(ActivityStore);
     const { 
-        selectActivity, 
         deleteActivity, 
         submitting, 
         loadingTarget,

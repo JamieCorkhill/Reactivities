@@ -1,6 +1,6 @@
 import { action, computed, makeObservable, observable, configure, runInAction } from 'mobx';
 import { createContext, SyntheticEvent } from 'react';
-import { act } from 'react-dom/test-utils';
+import { Nullable } from '../../types';
 import agent from '../api/agent';
 import { IActivity } from '../models/Activity';
 
@@ -11,13 +11,10 @@ class ActivityStore {
     public activityRegistry: Map<string, IActivity> = new Map();
 
     @observable
-    public activity: IActivity | undefined;
+    public activity: Nullable<IActivity> = null;
 
     @observable
     public loadingInitial = false;
-
-    @observable
-    public editMode = false;
 
     @observable
     public submitting = false;
@@ -69,6 +66,11 @@ class ActivityStore {
         }
     }
 
+    @action
+    public clearActivity = () => {
+        this.activity = null;
+    }
+
     private getActivity = (id: string) => {
         return this.activityRegistry.get(id);
     }
@@ -81,7 +83,6 @@ class ActivityStore {
             await agent.activities.create(activity);
             runInAction(() => {
                 this.activityRegistry.set(activity.id, activity);
-                this.editMode = false;
             });
         } catch (e) {
             console.log(e);
@@ -99,7 +100,6 @@ class ActivityStore {
             runInAction(() => {
                 this.activityRegistry.set(activity.id, activity);
                 this.activity = activity;
-                this.editMode = false;
             });
         } catch (e) {
             console.log(e);
@@ -126,34 +126,6 @@ class ActivityStore {
                 this.loadingTarget = '';
             });
         }
-    }
-
-    @action
-    public openCreateForm = () => {
-        this.editMode = true;
-        this.activity = undefined;
-    }
-
-    @action
-    public openEditForm = (id: string) => {
-        this.activity = this.activityRegistry.get(id);
-        this.editMode = true;
-    }
-
-    @action
-    public cancelSelectedActivity = () => {
-        this.activity = undefined;
-    }
-
-    @action
-    public cancelFormOpen = () => {
-        this.editMode = false;
-    }
-
-    @action
-    public selectActivity = (id: string) => {
-        this.activity = this.activityRegistry.get(id);
-        this.editMode = false;
     }
 
     @computed
