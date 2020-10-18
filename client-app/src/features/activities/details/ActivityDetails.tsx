@@ -26,11 +26,14 @@ export const ActivityDetails: React.FC<
     } = activityStore;
 
     useEffect(() => {
-        loadActivity(match.params.id)
+        loadActivity(match.params.id);
     }, [loadActivity, match.params.id]);
 
-    if (loadingInitial || !activity)
+    if (loadingInitial)
         return <LoadingComponent content="Loading activity..."/>
+
+    if (!activity)
+        return <h2>Not Found</h2>;
 
     return (
         <Grid>

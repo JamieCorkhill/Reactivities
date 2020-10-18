@@ -13,6 +13,9 @@
         <e p="Details" t="Include">
           <e p="Query.cs" t="Include" />
         </e>
+        <e p="Middleware" t="Include">
+          <e p="ErrorHandlingMiddleware.cs" t="Include" />
+        </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
@@ -39,10 +42,13 @@
           <e p="List.cs" t="Include" />
         </e>
         <e p="Application.csproj" t="IncludeRecursive" />
+        <e p="Errors" t="Include">
+          <e p="RestException.cs" t="Include" />
+        </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netstandard2.1" t="Include">
+            <e p="netcoreapp3.0" t="Include">
               <e p="Application.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -55,7 +61,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netstandard2.1" t="Include">
+            <e p="netcoreapp3.0" t="Include">
               <e p="Domain.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -77,7 +83,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netstandard2.1" t="Include">
+            <e p="netcoreapp3.0" t="Include">
               <e p="Persistence.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
