@@ -23,25 +23,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9192bc7-6936-4227-ba0d-327f8e446150" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/API/Middleware/ErrorHandlingMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Errors/RestException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client-app/src/app/layout/NotFound.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/User/Login.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/AppUser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Persistence/Migrations/20201018072115_AddedIdentity.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Persistence/Migrations/20201018072115_AddedIdentity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-app/src/app/common/form/DateInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-app/src/app/common/form/SelectInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-app/src/app/common/form/TextAreaInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-app/src/app/common/form/TextInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-app/src/app/common/options/categoryOptions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-app/src/app/common/utils/utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client-app/typings-custom/react-widgets-date-fns.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Reactivities/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Reactivities/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Reactivities/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Reactivities/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/API/API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Activities/Create.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Activities/Create.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Activities/Delete.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Activities/Delete.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Activities/Details.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Activities/Details.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Activities/Edit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Activities/Edit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Persistence/Persistence.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Persistence/Persistence.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Persistence/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Persistence/DataContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Persistence/Migrations/DataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Persistence/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Persistence/Seed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Persistence/Seed.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client-app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-app/src/app/api/agent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client-app/src/app/api/agent.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-app/src/app/layout/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-app/src/app/layout/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client-app/src/features/activities/details/ActivityDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-app/src/features/activities/details/ActivityDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-app/src/app/models/Activity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client-app/src/app/models/Activity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-app/src/app/stores/ActivityStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client-app/src/app/stores/ActivityStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-app/src/features/activities/dashboard/ActivityListItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-app/src/features/activities/dashboard/ActivityListItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-app/src/features/activities/details/ActivityDetailedInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-app/src/features/activities/details/ActivityDetailedInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-app/src/features/activities/details/ActivityDetailsHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-app/src/features/activities/details/ActivityDetailsHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-app/src/features/activities/form/ActivityForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-app/src/features/activities/form/ActivityForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client-app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client-app/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client-app/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/client-app/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,21 +64,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/00E4CC82-435B-478C-B083-227A479F9D7B/3A4/List.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/API/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/API/appsettings.json" />
-        <option value="$PROJECT_DIR$/Application/Application.csproj" />
         <option value="$PROJECT_DIR$/Domain/Domain.csproj" />
         <option value="$PROJECT_DIR$/Persistence/Persistence.csproj" />
         <option value="$PROJECT_DIR$/Application/Activities/Create.cs" />
         <option value="$PROJECT_DIR$/Application/Errors/RestException.cs" />
         <option value="$PROJECT_DIR$/API/Middleware/ErrorHandlingMiddleware.cs" />
-        <option value="$PROJECT_DIR$/API/Startup.cs" />
         <option value="$PROJECT_DIR$/Application/Activities/Delete.cs" />
         <option value="$PROJECT_DIR$/Application/Activities/Edit.cs" />
         <option value="$PROJECT_DIR$/Application/Activities/Details.cs" />
+        <option value="$PROJECT_DIR$/Domain/AppUser.cs" />
+        <option value="$PROJECT_DIR$/Persistence/DataContext.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/af5e3c36-8d83-4091-b761-87016e540925/console.sql" />
+        <option value="$PROJECT_DIR$/Persistence/Seed.cs" />
+        <option value="$PROJECT_DIR$/API/Program.cs" />
+        <option value="$PROJECT_DIR$/API/Startup.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/af5e3c36-8d83-4091-b761-87016e540925/console_1.sql" />
+        <option value="$PROJECT_DIR$/Application/Application.csproj" />
+        <option value="$PROJECT_DIR$/Application/User/Login.cs" />
       </list>
     </option>
   </component>
@@ -76,6 +99,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -126,7 +150,9 @@
       <workItem from="1602911364698" duration="56000" />
       <workItem from="1602912058228" duration="2000" />
       <workItem from="1602970976443" duration="1038000" />
-      <workItem from="1602972051535" duration="5557000" />
+      <workItem from="1602972051535" duration="6148000" />
+      <workItem from="1603004947804" duration="2109000" />
+      <workItem from="1603057819859" duration="57000" />
     </task>
     <servers />
   </component>
@@ -145,14 +171,51 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1445" y="188" width="800" height="672" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603005848768">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state x="1445" y="188" width="800" height="672" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.2560.1053@0.27.2560.1053" timestamp="1603005848768" />
+    <state x="1628" y="252" width="424" height="538" key="FileChooserDialogImpl" timestamp="1603005786960">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state x="1628" y="252" width="424" height="538" key="FileChooserDialogImpl/0.27.2560.1053@0.27.2560.1053" timestamp="1603005786960" />
+    <state width="941" height="358" key="GridCell.Tab.0.bottom" timestamp="1603006602427">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state width="941" height="358" key="GridCell.Tab.0.bottom/0.27.2560.1053@0.27.2560.1053" timestamp="1603006602427" />
+    <state width="941" height="358" key="GridCell.Tab.0.center" timestamp="1603006602424">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state width="941" height="358" key="GridCell.Tab.0.center/0.27.2560.1053@0.27.2560.1053" timestamp="1603006602424" />
+    <state width="941" height="358" key="GridCell.Tab.0.left" timestamp="1603006602423">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state width="941" height="358" key="GridCell.Tab.0.left/0.27.2560.1053@0.27.2560.1053" timestamp="1603006602423" />
+    <state width="941" height="358" key="GridCell.Tab.0.right" timestamp="1603006602427">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state width="941" height="358" key="GridCell.Tab.0.right/0.27.2560.1053@0.27.2560.1053" timestamp="1603006602427" />
+    <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1603005806283">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state width="263" height="500" key="HiddenNamespacesPopup/0.27.2560.1053@0.27.2560.1053" timestamp="1603005806283" />
     <state x="497" y="229" width="1022" height="737" key="SettingsEditor" timestamp="1602911412959">
       <screen x="0" y="27" width="2560" height="1053" />
     </state>
     <state x="497" y="229" width="1022" height="737" key="SettingsEditor/0.27.2560.1053@0.27.2560.1053" timestamp="1602911412959" />
+    <state x="1751" y="422" width="187" height="204" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1603005833229">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state x="1751" y="422" width="187" height="204" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.27.2560.1053@0.27.2560.1053" timestamp="1603005833229" />
+    <state x="1701" y="268" width="287" height="513" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1603005828781">
+      <screen x="0" y="27" width="2560" height="1053" />
+    </state>
+    <state x="1701" y="268" width="287" height="513" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.27.2560.1053@0.27.2560.1053" timestamp="1603005828781" />
   </component>
 </project>

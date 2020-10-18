@@ -6,12 +6,16 @@ import { createBrowserHistory } from 'history';
 
 import {App} from './app/layout/App';
 
+import 'react-widgets/dist/css/react-widgets.css'; 
 import 'react-toastify/dist/ReactToastify.min.css';
 import 'semantic-ui-css/semantic.min.css'
 import './app/layout/styles.css';
 
 import * as serviceWorker from './serviceWorker';
 import { ScrollToTop } from './app/layout/ScrollToTop';
+import dateFnsLocalizer from 'react-widgets-date-fns';
+
+new dateFnsLocalizer();
 
 export const history = createBrowserHistory();
 

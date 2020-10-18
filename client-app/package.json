@@ -11,14 +11,21 @@
     "@types/node": "^12.12.67",
     "@types/react": "^16.9.52",
     "@types/react-dom": "^16.9.8",
+    "@types/react-widgets": "^4.3.3",
     "axios": "^0.20.0",
+    "date-fns": "^2.0.0-alpha.13",
+    "final-form": "^4.20.1",
     "mobx": "^6.0.1",
     "mobx-react-lite": "^3.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-final-form": "^6.5.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-toastify": "^6.0.9",
+    "react-widgets": "^4.4.11",
+    "react-widgets-date-fns": "^4.0.26",
+    "revalidate": "^1.2.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.0",
     "typescript": "^3.7.5",
@@ -47,6 +54,9 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.6",
+    "@types/revalidate": "^1.1.2",
+    "@types/testing-library__jest-dom": "^5.9.4",
+    "@types/testing-library__react": "^10.2.0",
     "@types/uuid": "^8.3.0"
   }
 }
