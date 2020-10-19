@@ -10,6 +10,8 @@
         <e p="API.csproj" t="IncludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="ActivitiesController.cs" t="Include" />
+          <e p="BaseController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
           <e p="ValuesController.cs" t="Include" />
         </e>
         <e p="Details" t="Include">
@@ -34,8 +36,6 @@
           </e>
         </e>
         <e p="reactivities.db" t="Include" />
-        <e p="reactivities.db-shm" t="Include" />
-        <e p="reactivities.db-wal" t="Include" />
       </e>
       <e p="Application" t="IncludeRecursive">
         <e p="Activities" t="Include">
@@ -49,8 +49,18 @@
         <e p="Errors" t="Include">
           <e p="RestException.cs" t="Include" />
         </e>
+        <e p="Interfaces" t="Include">
+          <e p="IJwtGenerator.cs" t="Include" />
+          <e p="IUserAccessor.cs" t="Include" />
+        </e>
         <e p="User" t="Include">
+          <e p="CurrentUser.cs" t="Include" />
           <e p="Login.cs" t="Include" />
+          <e p="Register.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+        </e>
+        <e p="Validators" t="Include">
+          <e p="ValidatorExtensions.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -71,6 +81,21 @@
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
               <e p="Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Infrastructure" t="IncludeRecursive">
+        <e p="Infrastructure.csproj" t="IncludeRecursive" />
+        <e p="Security" t="Include">
+          <e p="JwtGenerator.cs" t="Include" />
+          <e p="UserAccessor.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="Infrastructure.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
