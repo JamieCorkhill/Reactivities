@@ -2,6 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 import { history } from '../..';
 import { IActivity } from '../models/Activity';
 import { toast } from 'react-toastify';
+import { IUser, IUserFormValues } from '../models/User';
 
 axios.defaults.baseURL = 'http://localhost:5000/api';
 
@@ -24,7 +25,7 @@ axios.interceptors.response.use(undefined, error => {
         toast.error('Server Error - check the terminal for more info!');
     }
 
-    throw error;
+    throw error.response;
 });
 
 const responseBody = <T>(response: AxiosResponse<T>) => response.data;
@@ -48,6 +49,13 @@ const activities = {
     delete: (id: string) => requests.del(`/activities/${id}`),
 };
 
+const user = {
+    current: (): Promise<IUser> => requests.get('/user'),
+    login: (user: IUserFormValues): Promise<IUser> => requests.post(`/user/login`, user),
+    register: (user: IUserFormValues): Promise<IUser> => requests.post(`/user/register`, user),
+}
+
 export default {
     activities,
+    user
 };

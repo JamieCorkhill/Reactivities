@@ -10,6 +10,7 @@ import { ActivityDetailsHeader } from './ActivityDetailsHeader';
 import { ActivityDetailedInfo } from './ActivityDetailedInfo';
 import { ActivityDetailedChat } from './ActivityDetailedChat';
 import { ActivityDetailedSidebar } from './ActivityDetailedSidebar';
+import { RootStoreContext } from '../../../app/stores/RootStore';
 
 interface IDetailParams {
     id: string;
@@ -18,12 +19,12 @@ interface IDetailParams {
 export const ActivityDetails: React.FC<
     RouteComponentProps<IDetailParams>
 > = observer(({ match, history }) => {
-    const activityStore = useContext(ActivityStore);
+    const rootStore = useContext(RootStoreContext);
     const { 
         loadActivity,
         activity,
         loadingInitial
-    } = activityStore;
+    } = rootStore.activityStore;
 
     useEffect(() => {
         loadActivity(match.params.id);
