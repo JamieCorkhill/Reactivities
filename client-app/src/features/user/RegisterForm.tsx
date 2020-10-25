@@ -9,17 +9,19 @@ import { IUserFormValues } from '../../app/models/User';
 import { RootStoreContext } from '../../app/stores/RootStore';
 
 const validate = combineValidators({
+    username: isRequired('email'),
+    displayName: isRequired('password'),
     email: isRequired('email'),
     password: isRequired('password')
 });
 
-export const LoginForm = () => {
+export const RegisterForm = () => {
     const rootStore = useContext(RootStoreContext);
-    const { login } = rootStore.userStore;
+const { register } = rootStore.userStore;
 
     return (
         <FinalForm
-            onSubmit={(values: IUserFormValues) => login(values).catch(error => ({
+            onSubmit={(values: IUserFormValues) => register(values).catch(error => ({
                 [FORM_ERROR]: error
             }))}
             validate={validate}
@@ -33,7 +35,17 @@ export const LoginForm = () => {
                 dirtySinceLastSubmit 
             }) => (
                 <Form onSubmit={handleSubmit}>
-                    <Header as='h2' content='Login to Reactivities' color='teal' textAlign='center' />
+                    <Header as='h2' content='Sign up to Reactivities' color='teal' textAlign='center' />
+                    <Field
+                        name='username'
+                        component={TextInput}
+                        placeholder='Username'
+                    />
+                    <Field
+                        name='displayname'
+                        component={TextInput}
+                        placeholder='Display Name'
+                    />
                     <Field
                         name='email'
                         component={TextInput}
@@ -53,7 +65,7 @@ export const LoginForm = () => {
                         disabled={invalid && !dirtySinceLastSubmit || pristine} 
                         loading={submitting} 
                         color='teal' 
-                        content='Login'
+                        content='Register'
                     />
                 </Form>
             )}

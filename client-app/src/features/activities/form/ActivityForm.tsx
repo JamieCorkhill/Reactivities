@@ -2,7 +2,6 @@ import React, { FormEvent, useContext, useState, useEffect } from 'react';
 import { Button, Form, Grid, Segment } from 'semantic-ui-react';
 import { ActivityFormValues, IActivity, IActivityFormValues } from '../../../app/models/Activity';
 import { v4 as uuid } from 'uuid';
-import ActivityStore from '../../../app/stores/ActivityStore';
 import { observer } from 'mobx-react-lite';
 import { RouteComponentProps } from 'react-router-dom';
 import { Form as FinalForm, Field } from 'react-final-form';
